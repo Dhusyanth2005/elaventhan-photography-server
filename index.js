@@ -23,7 +23,7 @@ app.use('/api/user', require('./routes/user'));
 
 const PORT = process.env.PORT || 5000;
 app.get('/', (req, res) => {
-  res.send('Ranking System API is running on port ' + (process.env.PORT || 5000));
+  res.send('Backend Running Successfully!');
 });
 
 // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

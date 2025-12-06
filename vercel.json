@@ -1,5 +1,9 @@
 {
-"rewrites" : [{ "source": "/api/(.*)", "destination": "/api" }],
-"framework": "express",
-"installCommand": "npm install"
+  "version": 2,
+  "builds": [
+    { "src": "index.js", "use": "@vercel/node" }
+  ],
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/index.js" }
+  ]
 }
