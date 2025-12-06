@@ -1,5 +1,5 @@
 const { getFilesFromFolder } = require('../utils/driveHelper');
-const PhotoSelection = require('../models/PhotoSelection');
+const PhotoSelection = require('../models/photoSelection');
 
 const getUserGallery = async (req, res) => {
   const user = await require('../models/User').findById(req.user.id);
