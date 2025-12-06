@@ -25,12 +25,7 @@ const PORT = process.env.PORT || 5000;
 app.get('/', (req, res) => {
   res.send('Backend Running Successfully!');
 });
-app.get("/env-test", (req, res) => {
-  res.json({
-    mongo: process.env.MONGODB_URI,
-    jwt: process.env.JWT_SECRET
-  });
-});
+
 
 // app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
