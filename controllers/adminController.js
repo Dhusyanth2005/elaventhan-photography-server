@@ -1,5 +1,5 @@
 const User = require('../models/User');
-const PhotoSelection = require('../models/PhotoSelection');
+const PhotoSelection = require('../models/photoSelection');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const { extractFolderId, getFilesFromFolder } = require('../utils/driveHelper');
@@ -33,7 +33,7 @@ const getAllUsersWithSelections = async (req, res) => {
     .select('username plainPassword driveFolderLink folderId createdAt') // Include plainPassword, exclude hashed password
     .sort({ createdAt: -1 });
 
-  const selections = await require('../models/PhotoSelection').aggregate([
+  const selections = await require('../models/photoSelection').aggregate([
     { $group: { _id: '$user', count: { $sum: 1 } } }
   ]);
 
